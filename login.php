@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['user_details'][1])) {
+     $userDetails = $_SESSION['user_details'][1];
+    // Access individual details like $userDetails['id'], $userDetails['fullName'], etc.
+      header("location:index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,35 +25,30 @@
         padding: 50px;
         border-radius: 10px;
       }
+      .register-link {
+        color: var(--blue);
+      }
+      .register-link:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <!-- Top Navigation Bar -->
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html"><h1>SH</h1></a>
-      </div>
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#teachers">Featured Teachers</a></li>
-        <li><a href="#courses">Most Courses</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="login.html" class="active">Sign In</a></li>
-      </ul>
-    </nav>
+ 	<?php include('includes/header.php');?>
 
     <!-- Login form section -->
     <section class="login-section" id="login">
       <div class="login-container">
         <h2>Login</h2>
-        <form class="login-form">
+        <form class="login-form" method="post" action="submit-login.php" name="login">
           <div class="input-container">
-            <label for="name">Email</label>
+            <label for="email">Email</label>
 
             <input
               type="text"
-              id="name"
-              name="name"
+              id="email"
+              name="email"
               placeholder="Enter your email"
               class="input"
             />
@@ -53,8 +58,8 @@
 
             <input
               type="password"
-              id="name"
-              name="name"
+              id="password"
+              name="password"
               placeholder="Enter your password"
               class="input"
             />
@@ -62,14 +67,14 @@
           <div class="login-button">
             <button class="login-btn">Sign In</button>
           </div>
+          <p>
+            Don't have an account?
+            <a href="register.php" class="register-link">Register</a>
+          </p>
         </form>
       </div>
     </section>
     <!-- Footer -->
-    <footer class="footer">
-      <p>
-        &copy; 2023 Smart Hub - Student Learning Platform. All rights reserved.
-      </p>
-    </footer>
+  <?php include('includes/footer.php');?>
   </body>
 </html>

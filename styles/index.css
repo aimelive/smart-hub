@@ -74,7 +74,7 @@ a {
   padding: 0px 40px;
 }
 
-.welcome-text {
+/* .welcome-text {
   flex: 1;
 }
 
@@ -82,7 +82,7 @@ a {
   font-size: 40px;
   margin-bottom: 20px;
   color: var(--blue);
-}
+} */
 
 .welcome-text p {
   font-size: 18px;
@@ -400,7 +400,12 @@ a {
   border-radius: 5px;
 }
 
-.login-button{
+.login-button {
   padding: 5px;
   margin-bottom: 10px;
+}
+
+.amata {
+  background-color: red;
+  padding: 20px;
 }
