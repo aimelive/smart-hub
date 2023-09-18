@@ -71,7 +71,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 40px;
 }
 
 /* .welcome-text {
@@ -114,36 +113,6 @@ a {
 .featured-teachers h2 {
   font-size: 24px;
   margin-bottom: 30px;
-}
-
-.teacher-card {
-  display: inline-block;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  margin: 20px;
-  width: 300px;
-}
-
-.teacher-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-.teacher-card button {
-  outline: none;
-  background-color: #0157d0;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.teacher-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
 }
 
 .rating {

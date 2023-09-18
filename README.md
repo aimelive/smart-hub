@@ -1,2 +1,2 @@
-# smart-hub
-Html, CSS and JS basics.
+# Smart Hub
+Online tutoring platform
