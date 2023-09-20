@@ -21,7 +21,7 @@
         <div class="grid grid-cols-3 gap-8 mt-4">
             <?php
             include('includes/config.php');
-            $sql = "SELECT * FROM booked_sessions where user_id ='" . $userDetails['id'] . "'";
+            $sql = "SELECT * FROM booked_sessions where user_id ='" . $userDetails['id'] . "' OR teacher_id ='" . $userDetails['id'] . "'";
             $result = mysqli_query($conn, $sql);
 
             if ($result && mysqli_num_rows($result) > 0) {

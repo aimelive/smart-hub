@@ -29,7 +29,7 @@
       $role = $row['role'];
       $bio = $row['bio'];
 
-      $_SESSION['user_details'][$id] = [
+      $_SESSION['user_details'][1] = [
         'id' => $id,
         'fullName' => $fullName,
         'email' => $email,
